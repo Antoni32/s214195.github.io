@@ -70,25 +70,15 @@
 
 <div class="container-fluid bg-1 text-center">    
   <h2 class="margin">SOS</h2><br>
-  <p>Antoni Konkol 219###</p>
-  <p class="margin">Piotr Kołc 214195</p>
-  <div class="row">
-    <div class="col-sm-4">
-      <h4>Progressive Web App</h4>
-      <p>This is our Progressive Web App</p>
-      <img src="images/pwa.png" class="img-responsive margin" style="width:100%, padding: auto;" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <h4>Bootstrap</h4>
-      <p>It's made with the usage of Bootstrap</p>
-      <img src="images/bootstrap.png" class="img-responsive margin" style="width:100%, padding: auto;" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <h4>Github Pages</h4>
-      <p>It's hosted on Github Pages</p>
-      <img src="images/github_pages.png" class="img-responsive margin" style="width:100% , padding: auto;" alt="Image">
-    </div>
-  </div>
+  <p>Click the button to send SOS signal</p>
+  <button onclick="vibrate()">SOS</button>
+
+<script>
+function vibrate() {
+  navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibrate for 1 second (1000 milliseconds)
+  
+}
+</script>
 </div>
 
 <!-- Footer --> 
