@@ -69,26 +69,47 @@
 </nav>
 
 <div class="container-fluid bg-1 text-center">    
-  <h2 class="margin">Progressive Web App</h2><br>
-  <p>Antoni Konkol 219###</p>
-  <p class="margin">Piotr Kołc 214195</p>
-  <div class="row">
-    <div class="col-sm-4">
-      <h4>Progressive Web App</h4>
-      <p>This is our Progressive Web App</p>
-      <img src="images/pwa.png" class="img-responsive margin" style="width:100%, padding: auto;" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <h4>Bootstrap</h4>
-      <p>It's made with the usage of Bootstrap</p>
-      <img src="images/bootstrap.png" class="img-responsive margin" style="width:100%, padding: auto;" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <h4>Github Pages</h4>
-      <p>It's hosted on Github Pages</p>
-      <img src="images/github_pages.png" class="img-responsive margin" style="width:100% , padding: auto;" alt="Image">
-    </div>
-  </div>
+  <h2 class="margin">Map</h2><br>
+  <html>
+<head>
+  <title>Show User Location on Map using OpenStreetMap</title>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+  <style>
+    #mapid {
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div id="mapid"></div>
+  <script>
+    var mymap = L.map('mapid').setView([0, 0], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+    }).addTo(mymap);
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+      mymap.setView([latitude, longitude], 13);
+      L.marker([latitude, longitude]).addTo(mymap);
+    }
+  </script>
+  <button onclick="getLocation()">Get Location</button>
+</body>
+</html>
 </div>
 
 <!-- Footer --> 
