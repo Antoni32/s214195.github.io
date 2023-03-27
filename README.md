@@ -1,2 +1,2 @@
 # s214195.github.io
-pwa app
+This is a Progressive Web App

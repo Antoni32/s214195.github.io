@@ -1,6 +1,6 @@
 {
-    "name": "E Doctor",
-    "short_name": "edoc",
+    "name": "Progressive Web App",
+    "short_name": "pwa",
     "start_url": "index.html",
     "display": "minimal-ui",
     "theme_color": "#51355A",
