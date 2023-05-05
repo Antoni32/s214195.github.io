@@ -1,36 +1,21 @@
 {
-    "name": "Progressive Web App",
-    "short_name": "pwa",
-    "start_url": "index.html",
-    "display": "minimal-ui",
-    "theme_color": "#51355A",
-    "background_color": "#fff8f0",
-    "orientation": "portrait-primary",
-    "icons": [
-      {
-        "src": "/images/icons/health_icon.svg",
-        "type": "image/png",
-        "sizes": "72x72 96x96 128x128 144x144 152x152"
-      },
-      {
-        "src": "/images/icons/icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/images/icons/icon-256x256.png",
-        "type": "image/png",
-        "sizes": "256x256"
-      },
-      {
-        "src": "/images/icons/icon-384x384.png",
-        "type": "image/png",
-        "sizes": "384x384"
-      },
-      {
-        "src": "/images/icons/icon-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ]
-  }
+  "name": "Twoja SPA",
+  "short_name": "SPA",
+  "description": "Przykładowa aplikacja SPA jako PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

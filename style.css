@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Dodatkowe style dla sekcji, aby łatwiej było zauważyć granice */
+#sekcja1 { background-color: #f0f8ff; }
+#sekcja2 { background-color: #faf0e6; }
+#sekcja3 { background-color: #e0ffff; }
+#sekcja4 { background-color: #f5f5dc; }
+#sekcja5 { background-color: #f5f5f5; }
+
+.doctor {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+
